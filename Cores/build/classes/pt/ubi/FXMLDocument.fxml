@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ubi.FXMLDocumentController">
+   <center>
+      <Pane fx:id="paneTela" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="298.4000244140625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <Label text="Red:       " BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <Slider fx:id="slideRed" max="255.0" prefHeight="14.0" prefWidth="511.0" BorderPane.alignment="CENTER" />
+               </center>
+               <right>
+                  <Label fx:id="lblRed" style="-fx-background-color: red;" text="Label" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <left>
+                  <Label text="Green:   " BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <Slider fx:id="slideGreen" max="255.0" BorderPane.alignment="CENTER" />
+               </center>
+               <right>
+                  <Label fx:id="lblGreen" style="-fx-background-color: green;" text="Label" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <left>
+                  <Label text="Blue:      " BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <Slider fx:id="slideBlue" max="255.0" BorderPane.alignment="CENTER" />
+               </center>
+               <right>
+                  <Label fx:id="lblBlue" style="-fx-background-color: blue;" text="Label" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
